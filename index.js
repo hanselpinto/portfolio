@@ -44,11 +44,12 @@ clickLinkFour.addEventListener('click', () => {
 //show navbar on scroll after a hero image
 const posM = document.querySelector('#missionSection');
 const yPos = window.innerHeight;
-var path = window.location.pathname;
-var page = path.split("/").pop();
+var pageName = document.title;
+// var path = window.location.pathname;
+// var page = path.split("/").pop();
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= yPos && page === 'index.html') {
+    if (window.scrollY >= yPos && document.title === "HOP") {
         activeNav.className = "stickyNavBarActive ";
     }
 
