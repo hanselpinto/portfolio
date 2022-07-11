@@ -1,0 +1,9 @@
+<svg width="320" height="500" viewBox="0 0 320 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 112">
+<g id="diskAnimation">
+<path id="halfDisk" fill-rule="evenodd" clip-rule="evenodd" d="M64 370C64 425.228 108.772 470 164 470C219.228 470 264 425.228 264 370H224C224 403.137 197.137 430 164 430C130.863 430 104 403.137 104 370H64Z" fill="#E0FC82"/>
+<circle id="rightBall" cx="244" cy="350" r="20" fill="#E0FC82"/>
+<circle id="leftBall" cx="84" cy="350" r="20" fill="#E0FC82"/>
+</g>
+</g>
+</svg>

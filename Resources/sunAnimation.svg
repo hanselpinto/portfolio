@@ -1,0 +1,21 @@
+<svg width="342" height="342" viewBox="0 0 342 342" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="sunAnimation ">
+<g id="Sun" filter="url(#filter0_d_121_2960)">
+<circle r="71" transform="matrix(1 0 0 -1 171 171)" fill="#E0FC82"/>
+</g>
+<path id="orbit" d="M307 171C307 94.7744 245.877 33 170.5 33C95.1233 33 34 94.7744 34 171C34 247.226 95.1233 309 170.5 309C245.877 309 307 247.226 307 171Z" stroke="#E0FC82" stroke-width="2"/>
+<circle id="moon" cx="171" cy="32" r="19" fill="#E0FC82"/>
+</g>
+<defs>
+<filter id="filter0_d_121_2960" x="0" y="0" width="342" height="342" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="50"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.878431 0 0 0 0 0.988235 0 0 0 0 0.509804 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_121_2960"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_121_2960" result="shape"/>
+</filter>
+</defs>
+</svg>
