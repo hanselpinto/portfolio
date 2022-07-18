@@ -49,7 +49,7 @@ var pageName = document.title;
 // var page = path.split("/").pop();
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= yPos && document.title === "HOP") {
+    if (window.scrollY >= yPos && document.title === "Hansel's portfolio") {
         activeNav.className = "stickyNavBarActive ";
     }
 
