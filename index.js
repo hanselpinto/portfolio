@@ -40,7 +40,6 @@ clickLinkFour.addEventListener('click', () => {
 });
 
 
-
 //show navbar on scroll after a hero image
 const posM = document.querySelector('#missionSection');
 const yPos = window.innerHeight;
@@ -71,17 +70,25 @@ const tlMission = gsap.timeline({
     scrollTrigger: {
       trigger: "#missionSection",
       start: "top bottom",
-      end:"top top",
-      scrub: 1
     }
   });
   
-  gsap.utils.toArray(".missionParallax").forEach(layer => {
-    const speed = layer.dataset.speed;
-    const movement = (layer.offsetHeight * speed);
-    tlMission.from(layer, {y: movement, ease: "power4.out"}, 0);
-  });
- 
+    tlMission.from(".missionTitleAnimation, .missionTitleBody",{y:400,duration:1, opacity:0 });
+    tlMission.from(".plusSvg",{y:50,x:20, rotation:4,duration:2});
+   
+
+    const tlMissionScrub = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#missionSection",
+        start: "top bottom",
+        end:"bottom center",
+        scrub:1,
+      }
+    });
+tlMissionScrub.from(".imageMe",{y:150,duration:2});
+tlMissionScrub.from(".circleSvg",{y:50,x:-20,duration:2});
+tlMissionScrub.from(".coneSvg",{y:150,x:-20,rotation:20,duration:2});
+tlMissionScrub.to(".coneSvg",{y:-40,x:+10,rotation:20,duration:2});
 
 
 
@@ -90,42 +97,80 @@ const tlMission = gsap.timeline({
     scrollTrigger: {
       trigger: "#workSection",
       start: "top bottom",
-      end:"center center",
-      scrub: 1
     }
   });
-  tlwork.from(".tilesSection",{y:400, scale:0.7, ease: "power4.out" },"-=0.5");
+  tlwork.from(".divider, .workSectionTitle, .tilesSectionWrapper",{y:200, opacity:0, duration:0.5, ease: "sine.out"});
+
+//Experience animations
+const tlworkAnim = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#workSection",
+    start: "top bottom",
+    scrub:1,
+  }
+});
+tlworkAnim.fromTo(".circleWorkSvg",{y:500,x:-300,duration:1},{y:-100,x:100,duration:1});
+tlworkAnim.to(".rotateSvg",{y:-400, rotate:60,duration:1},"-=0.25");
+
 
 
 
  //Skills animations
  const tlSkill = gsap.timeline({
     scrollTrigger: {
-      trigger: ".skillSectionWrap",
+      trigger: "#skillSection",
       start: "top bottom",
-      end:"center top",
-      scrub: 1,
+      
     }
   });
 
-tlSkill.from("#designSkills", {y:-200,opacity:0, ease: "power4.out"});
- tlSkill.from("#discoverSkills", {y:100, x:-200,opacity:0, ease: "power4.out"},"-=0.5");
- tlSkill.from("#deploySkills", {y:100, x:+200, opacity:0, ease: "power4.out"},"-=0.5");
-
+  tlSkill.from(".skillSectionWrap",{y:200, opacity:0, duration:0.5, ease: "sine.out"});
+tlSkill.from("discoverSkills", {y:200,opacity:0, duration:0.5});
+ tlSkill.from("#designSkills", {y:200,ease: "slow(0.7, 0.7, false)",delay:0.25, duration:0.75, opacity:0},"-=0.5");
+ tlSkill.from("#deploySkills", {y:200, ease: "slow(0.7, 0.7, false)",opacity:0,delay:0.25, duration:0.75},"-=0.5");
  
+ const tlSkillAnim = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#skillSection",
+    start: "top bottom",
+    scrub:1
+  }
+});
+tlSkillAnim.fromTo(".plusSkill",{y:100, x:30,ease: "sine.out",rotate:20},{y:-100, x:-30,ease: "sine.out", rotate:-10});
+tlSkillAnim.fromTo(".coneSkillAnimation",{y:100,ease: "sine.out", rotate:30},{y:-100, ease: "sine.out", rotate:-30},"-=0.5");
+
+
+
 
  //Exp animations
  const tlExp = gsap.timeline({
     scrollTrigger: {
       trigger: ".experienceMainContainer",
       start: "top bottom",
-      end:"bottom center",
-      scrub: 1,
     }
   });
-
-  tlExp.from(".one",{y:50,scale:0.8, opacity:0, ease: "power4.out"});
-  tlExp.from(".two",{y:50, opacity:0, scale:0.8, ease: "power4.out" });
-  tlExp.from(".three",{y:50, opacity:0,scale:0.8, ease: "power4.out" });
+  tlExp.from(".expSectionTitle",{y:200, opacity:0, duration:0.5, ease: "sine.out"});
+  tlExp.from(".one",{y:200,scale:0.8, opacity:0, ease: "slow(0.7, 0.7, false)"});
+  tlExp.from(".two",{y:50, opacity:0, scale:0.8,delay:0.25, ease: "slow(0.7, 0.7, false)" });
+  tlExp.from(".three",{y:50, opacity:0,scale:0.8,delay:0.25,  ease: "slow(0.7, 0.7, false)" });
 
   
+  const tlExpAnim = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".experienceMainContainer",
+      start: "top bottom",
+      scrub:1
+    }
+  });
+  tlExpAnim.fromTo(".arrowShadow",{y:400, x:30,ease: "sine.out",rotate:20},{y:-100, x:-30,ease: "sine.out", rotate:-10});
+  tlExpAnim.fromTo(".circleExp",{y:40, x:30,ease: "sine.out",rotate:20},{y:-40, x:-30,ease: "sine.out", rotate:-10});
+
+
+//GetinTouch animations
+  const getInT = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sectionTitleContact",
+      start: "top bottom",
+    }
+  });
+  getInT.from(".sectionTitleContact, .contactContainer",{y:200, opacity:0, duration:0.5, ease: "sine.out"});
