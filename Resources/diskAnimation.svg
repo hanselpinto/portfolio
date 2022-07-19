@@ -1,7 +1,0 @@
-<svg width="200" height="250" viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="diskAnimation">
-<path id="halfDisk" fill-rule="evenodd" clip-rule="evenodd" d="M0 150C0 205.228 44.7715 250 100 250C155.228 250 200 205.228 200 150H160C160 183.137 133.137 210 100 210C66.8629 210 40 183.137 40 150H0Z" fill="#E0FC82"/>
-<circle id="rightBall" cx="180" cy="110" r="20" fill="#E0FC82"/>
-<circle id="rightBall_2" cx="20" cy="20" r="20" fill="#E0FC82"/>
-</g>
-</svg>
