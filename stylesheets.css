@@ -306,7 +306,6 @@ logo a h3{
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
-
     transition: 0.15s ease-in-out;
 }
 
@@ -345,10 +344,6 @@ logo a h3{
 
 .spanGetInTouch{
     position: relative;
-    overflow: hidden;
-    width: max-content;
-    height: min-content;
-    display: inline;
     text-align: center;
 }
 
@@ -360,6 +355,9 @@ logo a h3{
 .headingAnim span h2{
     display: inline;
    
+}
+.mainTitleCover{
+    display: inline-block;
 }
 
 .mainTitleCover, .headerStagger {
@@ -385,21 +383,23 @@ logo a h3{
     padding-top:64px;
     width: 100%;
     background-color: var(--primary);
+    
 }
 
 .sectionTitle {
     display: grid;
-    margin: 96px 48px 48px 0;
-    grid-template-columns: repeat(12, 1fr);
+    margin: 96px 48px 0 48px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));    
     grid-template-rows:auto;
+    column-gap: 24px;
+    row-gap: 24px;
     justify-items: center;
 }
 
 .sectionTitle h1 {
-    grid-column: 1/span 3;
+    grid-column: 1;
     text-align: left;
     grid-row: 1/span 6;
-    padding-right: 128px;
     line-height: 80%;
     font-size: 48px;
 
@@ -414,7 +414,7 @@ logo a h3{
 .imageMe{
     grid-column: 4/span 3;
     grid-row:6/span 4;
-    width: 80%;
+    max-width: 400px;
 }
 
 .plusSvg{
@@ -423,6 +423,7 @@ logo a h3{
     transform: scale(80%);
 }
 .circleSvg{
+    display: none;
     grid-column: 5/span 2;
     grid-row:8/span 1;
 }
@@ -439,6 +440,7 @@ logo a h3{
     flex-direction: column;
     margin:242px 48px 0 48px;
     background-color: var(--primary);
+    overflow: hidden;
 }
 main{
     background-color: var(--primary);
@@ -458,11 +460,13 @@ main{
     column-gap: 24px;
     width: 100%;
 }
+
 .workSectionTitle{
     grid-column:1/span 3;
     display: grid;
     grid-template-rows: repeat(4/1fr);
 }
+
 .circleWorkSvg{
     grid-row: 2/auto;
     grid-column: 2/auto;
@@ -473,6 +477,7 @@ main{
     width: 250px;
 
 }
+
 .workSectionTitleSticky{
     position:sticky;
     top:64px;
@@ -481,6 +486,7 @@ main{
     background-color: #1d1d1d;
     height: fit-content;
 }
+
 .tilesSectionWrapper{
     grid-column:5/span 13;
     display: flex;
@@ -601,7 +607,9 @@ main{
     width: 100%;
     margin-top:240px;
     background-color: var(--primary);
+    overflow: hidden;R
 }
+
 
 .skillSectionWrap {
     margin: 0 48px;
@@ -615,7 +623,7 @@ main{
     width: max-content;
     height: min-content;
     grid-column:2/span 3;
-    align-self: flex-end;
+    
 }
 .dividerSkill{
     width: 100%;
@@ -637,15 +645,17 @@ main{
 .skillWrap {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
-    grid-column: 3/ span 8;
+    grid-column: 1/ span 12;
     margin-top:32px;
 }
 
-.coneSkillAnimation{
+.coneSkillAnimation {
     grid-row:4;
     grid-column: 12;
 }
+
 .plusSkill{
     grid-row:2/span 1;
     grid-column: 10;
@@ -655,7 +665,7 @@ main{
     padding: 48px 48px;
     background-color: var(--primary);
     border: 1px solid var(--border);
-    width:100%;
+    min-width: 320px;
 }
 
 
@@ -716,7 +726,7 @@ margin: 48px 48px 0 48px;
 .experienceContainer {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 24px;
     border: 1px solid var(--border);
     background-color: var(--primary);
     padding: 48px 24px 48px 24px;
@@ -737,6 +747,7 @@ margin: 48px 48px 0 48px;
 .companyAndDates {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
 }
@@ -768,18 +779,8 @@ margin: 48px 48px 0 48px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    overflow: hidden;
 }
-
-.footerVideo {
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    object-fit:cover;
-    z-index: -100;
-}
-
 
 .contactContainer {
     display: flex;
@@ -849,12 +850,14 @@ margin: 48px 48px 0 48px;
 .MainContainer {
     display: block;
     position: relative;
-    margin: 96px 400px;
+    margin: 96px auto;
+    max-width: 1200px;
 }
 
 .MainContainer img {
     width: 100%;
     height: auto;
+    max-height: 900px;
 }
 
 .navButton:hover {
@@ -862,10 +865,11 @@ margin: 48px 48px 0 48px;
 }
 
 .articleContain {
-    margin: 64px 400px;
+    margin: 64px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 800px;
 }
 
 .articleContain p {
@@ -907,29 +911,28 @@ margin: 48px 48px 0 48px;
         transform: rotate(0deg);
     }
 }
-/*  inner page media queries */
 
-
-@media screen and (min-width:480px) and (max-width:1024px) {
+@media screen and (max-width:451px) {
     .titleContainer {
-        max-width: 75%;
+        max-width: 100%;
         margin-top: 48px;
-    }
+     }
 
     .hero {
-        padding: 32px 32px;
+        padding: 0 24px;
     }
 
-    .mainTitleCover {
+    .mainTitleCover h3 {
         font-family: 'Lora';
         font-style: normal;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 48px;
         line-height: 127%;
     }
 
     .subTitleCover {
-        /* font-size: 16px; */
+        font-size: 18px;
+        max-width: 90%;
         padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -937,469 +940,516 @@ margin: 48px 48px 0 48px;
         line-height: 150%;
     }
 
-    .mainNavSection a {
-        /* font-size: 32px; */
+    .navFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        padding-bottom:32px;
+
+    }
+
+    .mainNavSection li{
+        text-align: left;
+    }
+    .mainNavSection li a{
+        font-size: 32px; 
     }
 
     .contactCover {
         display: none;
     }
+    .sectionTitle{
+        margin: 96px 24px 0 24px;
+        display:block
+    }
+    .sectionTitle h1{
+        display:block;
 
-    .sectionTitle {
-        display: flex;
-        flex-direction: column;
-        margin: 0px 32px;
-        row-gap: 80px;
-        justify-content: center;
-        align-items: center;
-
+  /* grid-column: 1/ span 2; */
+    }
+    .sectionTitle h5{
+    padding-top:64px;
+    display:block;
+    font-size:18px;
     }
 
-    .sectionTitle h1 {
-        text-align: center;
-        line-height: 80%;
-        font-size: 80px;
-        padding: 0;
+    .imageMe{
+    display:block;  
+    float:right;    
+    width:80% ;
+    padding-top:32px;
 
     }
-
-    .sectionTitle h5 {
-        text-align: left;
-        text-align: center;
-        line-height: 175%;
+   
+    .coneSvg{
+        display:block;
+    }
+    .plusSvg{
+        display:none;
+        position: absolute;
+        top:240px;
+        right:0;
     }
 
+#workSection {
+    margin:120px 24px 0 24px;
+}
+.workGrid{
+    display:flex;
+    flex-direction:column;
+}
+.workSectionTitleSticky{
+    position:relative;
+    top:0;
+}
+.workTileflex{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+}
+.frame{
+    width:100%;
+    min-height: 250px;
+}
+.frame img{
+    object-fit: cover;
+}
 
-    .missionSectionAnimation {
-        transform: scale(80%);
-        margin-top: -24px;
+.tags{
+    flex-direction: row;
+}
+.workTilesFlexInfo{
+    width:fit-content;
+    margin:16px 16px 16px 16px; 
+}
+.workTilesTopWrapper{
 
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.workTiles h6{
+    padding-top:16px;
+    font-size: 16px;
+}
+ 
+.workTiles h4{
+    font-size: 24px;
+}
 
-    }
+.frame .workTitleImage{
+    border-radius: 4px 4px 0 0;
+}
+.workTilesBottomWrapper{
+    padding-top:32px;
+}
 
-    #workSection {
-        display: flex;
-        flex-direction: column;
-        row-gap: 32px;
-        width: 100%;
+.rotateSvg{
+    position: absolute;
+   
+    right:-150px;
+    z-index: 100;
+    width: 50%;
+}
 
-    }
+.workSectionTitle h1{
+    font-size:64px;
+}
 
-    .workSectionTitle {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 32px;
-        margin-right: 32px;
+.skillSectionWrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px;
+    justify-items: flex-start;
+    grid-gap:0px;
+}
+.skillSectionWrap h1{
+    font-size:64px;
+}
+.skillWrap{
+    flex-direction: column;
+    row-gap: 24px;
+}
+#skillSection {
+    margin-top: 120px;
+}
 
+.expTitle {
+font-size: 64px;
+margin-top: 42px;
+}
 
-    }
+.expSectionTitle {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+    margin: 120px 24px 0 24px;
+}
+.experienceMainContainer{
+  display: flex;
+  margin: 42px 24px 0 24px;
+  flex-direction: column
+}
+.jobTitle{
+    font-size:24px;
+}
+.companyAndDates, .companyName{
+    font-size:16px;
+}
+.experienceMainContainer h6{
+    font-size: 16px;
+}
+.circleExp{
+    display: block;
+    width:min-content ;
+}
 
-    .workSectionTitle h1 {
-        font-size: 80px;
-    }
+.arrowShadow{
+    width: 50%;
+    display: block;
+    position: absolute;
+    z-index: auto;
+    
+}
+.experienceContainer{
+    padding: 48px 16px 24px 16px;
+}
 
+#GetInTouchSection {
+    display: block;
+    position: relative;
+    margin: 120px 24px 96px 24px;
+}
+.sectionTitleContact{
+    font-size:48px;
+}
+.contactContainer{
+    font-size: 24px;
+}
 
-    .tilesSectionWrapper {
-        display: block;
-        margin: 0 32px 0 32px;
-    }
+.contactMainContainer {
+    margin-top: 48px;
+ }
 
-    .tilesSection {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
+ .footerWrap{
+    margin:0 24px 32px 24px;
+    display: flex;
+    flex-direction: column-reverse;
 
-    .skillSectionWrap svg {
-        z-index: -20;
-        transform: scale(50%);
-        transform: translate3d(0, -424px, 0);
-    }
+    align-items: center;
+}
+.goToTopContainer{
+    position: static;
+    justify-content: center;
+}
+.hireMeAnimation{
+    display: none;
+}
 
+.footerWrap h6{
+    font-size: 12px;
+    margin-top: 32px;
+}
 
-    .skillWrap {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: left;
-        margin-top: 32px;
-        /* gap: 64px; */
-    }
-    .skillsTitleAnimation{
-        overflow: hidden;
-        width: fit-content;
-    }
+.stickyNavBarActive{
+    padding: 16px 24px;
+}
+.hamburgerMenuMain, .hamburgerMenuMain.active {
+    width: 100%;
+    border: none;
 
-    .skillSectionWrap {
-        margin: 96px auto;
-    }
-
-    .skillSectionWrap h1 {
-        font-size: 80px;
-    }
-
-    .expTitle {
-        font-size: 80px;
-    }
-
-    .expSectionTitle {
-        margin: 48px 48px;
-    }
-
-    .experienceMainContainer {
-        margin: 32px 32px;
-        display: flex;
-        flex-direction: column;
-        flex-direction: column-reverse;
-
-    }
-
-    .experienceContainerWrapper {
-        max-width: 100%;
-    }
-
-    .experienceAnimation {
-        transform: scale(70%);
-    }
-
-    .sectionTitleContact {
-        font-size: 80px;
-        text-align: left;
-        padding: 32px;
-    }
-
-    .contactMainContainer {
-        padding: 32px
-    }
-
-    .MainContainer {    
-        margin: 96px 32px;
-        margin-bottom: 24px;
-    }
-    .articleContain {
-        margin: 32px 32px;
-    }
-    .articleContain h2{
-        font-size: 32px;
-    }
-    .articleContain h4{
-        font-size: 24px;
-    }
-    .articleContain p{
-        font-size: 16px;
-    }
-    #GetInTouchSection{
-        margin-top: 96px;
-    }
+}
+.hamburgerMenuMain a {
+    font-size: 32px;
 }
 
 
-
-
-
-
-@media screen and (max-width:1500px){
-    .MainContainer {    
-        margin: 96px 96px;
-    }
-    .articleContain {
-        margin: 32px 96px;
-    }
-
+.MainContainer {
+    padding:0 24px;
+}
+.articleContain {
+    padding:0 24px;
+}
+.articleContain h2{
+    font-size: 32px;
+}
+.articleContain h4{
+    font-size: 20px;
+}
+.articleContain p {
+    font-size: 16px;
+}
 }
 
 
-
-
-@media screen and (max-width:500px) {
+@media screen and (min-width:451px) and (max-width:1024px) {
     .titleContainer {
         max-width: 100%;
         margin-top: 48px;
+     }
+
+     .contactCover {
+        display: none;
     }
 
     .hero {
-        padding: 32px 20px;
+        padding: 0 24px;
     }
 
-    .mainTitleCover {
+    .mainTitleCover h3 {
         font-family: 'Lora';
         font-style: normal;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 64px;
         line-height: 127%;
     }
 
     .subTitleCover {
-        /* font-size: 16px; */
-
+        font-size: 18px;
+        max-width: 60%;
+        padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 300;
         line-height: 150%;
-        max-width: 95%;
-        font-size: 16px;
-
-
     }
 
-    .subTitleCover h5 {
-        font-size: 16px;
-    }
-
-    .mainNavSection a {
-        font-size: 32px;
-    }
-
-    .contactCover {
-        display: none;
-    }
-
-    .sectionTitle {
+    .navFlex {
         display: flex;
         flex-direction: column;
-        margin: 0px 20px;
-        row-gap: 80px;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-
-    .sectionTitle h1 {
-        text-align: center;
-        line-height: 80%;
-        font-size: 64px;
-        padding: 0;
-
-    }
-
-    .sectionTitle h5 {
-        text-align: left;
-        text-align: center;
-        font-size: 18px;
-        line-height: 175%;
-    }
-
-
-    .missionSectionAnimation {
-        transform: scale(70%);
-        margin-top: -24px;
-
-    }
-
-    #workSection {
-        display: flex;
-        flex-direction: column;
-        row-gap: 24px;
-        width: 100%;
-
-    }
-
-    .workSectionTitle {
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        margin: 0 32px;
-        margin-right: 32px;
-
+        height: 100vh;
+        padding-bottom:32px;
 
     }
 
-    .workSectionTitle h1 {
-        font-size: 64px;
-    }
-
-
-    .tilesSectionWrapper {
-        display: block;
-        margin: 0 32px 0 32px;
-    }
-
-    .workTitle {
-        font-size: 24px;
-    }
-
-    .tilesSection {
-        display: flex;
-        flex-direction: column;
-        column-gap: 24px;
-        row-gap: 24px;
-    }
-
-    .skillSectionWrap svg {
-        z-index: -20;
-        transform: scale(50%);
-        transform: translate3d(0, -424px, 0);
-    }
-
-
-    .skillWrap {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .mainNavSection li{
         text-align: left;
-        margin-top: 32px;
-        padding: 20px;
-        /* gap: 64px; */
+    }
+    .mainNavSection li a{
+        font-size: 32px; 
     }
 
-    .skillSectionWrap {
-        margin: 96px auto;
+    .sectionTitle{
+        margin: 96p 32px 0 32px;
     }
 
-    .skillSectionWrap h1 {
-        font-size: 64px;
-    }
+.sectionTitle h5{
+    grid-column:4/span 8;
+    font-size:18px;
+}
 
-    .expTitle {
-        font-size: 64px;
-    }
-
-    .expSectionTitle {
-        margin: auto 20px;
-    }
-
-    .DividerExp {
-        display: none;
-    }
-
-    .experienceMainContainer {
-        margin: 32px 20px;
-        display: flex;
-        flex-direction: column;
-        flex-direction: column-reverse;
-
-    }
-
-    .experienceContainerWrapper {
-        max-width: 100%;
-    }
-
-    .experienceAnimation {
-        transform: scale(70%);
-    }
-
-    .experienceContainer {
-        padding: 32px 16px;
-    }
-
-    .companyName,
-    .jobTitle,
-    .experienceContainer h6 {
-        font-size: 16px;
-    }
-
-    .jobTitle {
-        font-size: 24px;
-    }
-
-    .sectionTitleContact {
-        font-size: 64px;
-        text-align: left;
-        padding: 32px;
-        padding-top: 64px;
-        text-align: center;
-    }
-
-    .contactMainContainer {
-        padding: 32px;
-        flex-direction: column;
-        margin-top: 0px;
-
-    }
-
-    .experienceAnimation {
-        transform: scale(60%);
-    }
-
-
-    .goToTopContainer {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        cursor: pointer;
-        padding-top: 64px;
-    }
-
-    .sectionTitleContact {
-        margin: auto 20px;
-        padding: 0px;
-    }
-
-    .goToTopContainer img {
-        width: 64px;
-        height: 64px;
-    }
-
-    .goToTopContainer h5 {
-        font-size: 18px;
-    }
-
-    .contactMainContainer {}
-
-    .goToTopContainer {
-        font-family: 'Inter';
-        text-decoration: none;
-        color: var(--secondary);
-    }
-
-    .contactContainer {
-        align-items: center;
-    }
-
-    .stickyNavBarActive {
-        padding: 12px 32px;
-    }
-
-    .workTitleImage {
-        max-height: 250px;
-    }
-
-    .workSectionTitle,
-    .tilesSectionWrapper {
-        margin: auto 20px
-    }
-
-
-    .hamburgerMenuMain.active {
-        width: 100%;
-
-    }
-
-    .hamburgerMenuContainer {
-        width: 100%;
-
-    }
-
-    .hamburgerMenuMain li a {
-        font-size: 42px;
-    }
-
-    .sectionTitleContact {
-        padding-top: 64px;
-    }
-
-    .MainContainer {    
-        margin: 96px 20px;
-        margin-bottom: 24px;
-    }
-    .articleContain {
-        margin: 32px 20px;
-    }
-    .articleContain h2{
-        font-size: 32px;
-    }
-    .articleContain h4{
-        font-size: 24px;
-    }
-    .articleContain p{
-        font-size: 16px;
-    }
-    #GetInTouchSection{
-        margin-top: 96px;
-    }
+.sectionTitle h1 {
+    grid-column:auto;
+    font-size:32px;
 
 }
+.imageMe{
+    grid-column: 3/span 2;
+    max-width: 250px;
+    padding-top: 160px;
+}
+  
+.coneSvg{
+    grid-column: 3/span 2;
+}
+
+#workSection {
+    margin:120px 24px 0 24px;
+}
+.workGrid{
+    display:flex;
+    flex-direction:column;
+}
+.workSectionTitleSticky{
+    position:relative;
+    top:0;
+}
+.workTileflex{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+}
+.frame{
+    width:100%;
+    min-height: 250px;
+}
+.frame img{
+    object-fit: cover;
+}
+
+.tags{
+    flex-direction: row;
+}
+.workTilesFlexInfo{
+    position: relative;
+    width: 100vh;
+    /* width:fit-content; */
+    margin:16px 16px 16px 16px; 
+}
+.workTilesTopWrapper{
+
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.workTiles h6{
+    padding-top:16px;
+    font-size: 16px;
+}
+ 
+.workTiles h4{
+    font-size: 24px;
+}
+
+.frame .workTitleImage{
+    border-radius: 4px 4px 0 0;
+}
+.workTilesBottomWrapper{
+    padding-top:32px;
+}
+
+.rotateSvg{
+    position: absolute;
+   
+    right:-150px;
+    z-index: 100;
+    width: 50%;
+}
+
+.workSectionTitle h1{
+    font-size:64px;
+}
+
+.skillSectionWrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px;
+    justify-items: flex-start;
+    grid-gap:0px;
+}
+.skillSectionWrap h1{
+    font-size:64px;
+}
+.skillWrap{
+    flex-direction: column;
+    row-gap: 24px;
+}
+#skillSection {
+    margin-top: 120px;
+    overflow: visible;
+}
+
+.expTitle {
+font-size: 64px;
+margin-top: 42px;
+}
+
+.expSectionTitle {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+    margin: 120px 24px 0 24px;
+}
+.experienceMainContainer{
+  display: flex;
+  margin: 42px 24px 0 24px;
+  flex-direction: column
+}
+.jobTitle{
+    font-size:24px;
+}
+.companyAndDates, .companyName{
+    font-size:16px;
+}
+.experienceMainContainer h6{
+    font-size: 16px;
+}
+.circleExp{
+    display: block;
+    width:min-content ;
+}
+
+.arrowShadow{
+    width: 20%;
+    display: block;
+    position: absolute;
+    z-index: auto;
+    
+}
+.experienceContainer{
+    padding: 48px 16px 24px 16px;
+}
+
+#GetInTouchSection {
+    display: block;
+    position: relative;
+    margin: 120px 24px 96px 24px;
+}
+.sectionTitleContact{
+    font-size:48px;
+}
+.contactContainer{
+    font-size: 24px;
+}
+
+.contactMainContainer {
+    margin-top: 48px;
+ }
+
+ .footerWrap{
+    margin:0 24px 32px 24px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.goToTopContainer{
+    position: static;
+    justify-content: center;
+}
+.hireMeAnimation{
+    display: none;
+}
+
+.footerWrap h6{
+    font-size: 12px;
+    margin-top: 32px;
+}
+
+.stickyNavBarActive{
+    padding: 16px 24px;
+}
+
+.hamburgerMenuMain a {
+    font-size: 32px;
+}
+
+.MainContainer {
+    padding:0 24px;
+  
+}
+.articleContain {
+    padding:0 24px;
+    max-width: 600px;
+}
+.articleContain h2{
+    font-size: 32px;
+}
+.articleContain h4{
+    font-size: 20px;
+}
+.articleContain p {
+    font-size: 16px;
+}
+
+}
+
+@media screen and (min-width:2700px){
+  body{
+        padding: 0 300px;
+    }
+}
+

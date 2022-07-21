@@ -74,34 +74,36 @@ const tlMission = gsap.timeline({
   });
   
     tlMission.from(".missionTitleAnimation, .missionTitleBody",{y:400,duration:1, opacity:0 });
-    tlMission.from(".plusSvg",{y:50,x:20, rotation:4,duration:2});
    
 
     const tlMissionScrub = gsap.timeline({
       scrollTrigger: {
         trigger: "#missionSection",
         start: "top bottom",
-        end:"bottom center",
+        end:"bottom top",
         scrub:1,
       }
     });
-tlMissionScrub.from(".imageMe",{y:150,duration:2});
-tlMissionScrub.from(".circleSvg",{y:50,x:-20,duration:2});
+
+tlMissionScrub.from(".imageMe",{y:250,duration:2});
+tlMissionScrub.to(".imageMe",{y:-20,duration:2});
+tlMissionScrub.from(".plusSvg",{y:50,x:20, rotation:10,duration:2});
+tlMissionScrub.to(".plusSvg",{y:-50,x:-20, rotation:-10,duration:2});
 tlMissionScrub.from(".coneSvg",{y:150,x:-20,rotation:20,duration:2});
-tlMissionScrub.to(".coneSvg",{y:-40,x:+10,rotation:20,duration:2});
+tlMissionScrub.to(".coneSvg",{y:-40,x:+10,rotation:-20,duration:2});
 
 
 
- //Experience animations
+ //work tiles
  const tlwork = gsap.timeline({
     scrollTrigger: {
       trigger: "#workSection",
       start: "top bottom",
     }
   });
-  tlwork.from(".divider, .workSectionTitle, .tilesSectionWrapper",{y:200, opacity:0, duration:0.5, ease: "sine.out"});
+  tlwork.from(".divider, .workSectionTitle, .tilesSectionWrapper",{y:200, opacity:0, duration:0.75, ease: "sine.out"});
 
-//Experience animations
+//work animations
 const tlworkAnim = gsap.timeline({
   scrollTrigger: {
     trigger: "#workSection",
@@ -174,3 +176,13 @@ tlSkillAnim.fromTo(".coneSkillAnimation",{y:100,ease: "sine.out", rotate:30},{y:
     }
   });
   getInT.from(".sectionTitleContact, .contactContainer",{y:200, opacity:0, duration:0.5, ease: "sine.out"});
+
+  const getInTAnim = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sectionTitleContact",
+      start: "top bottom",
+      scrub:1,
+    }
+  });
+  getInTAnim.from(".contactPlus",{y:200, opacity:0, duration:0.5, });
+  getInTAnim.to(".contactPlus",{y:-100, duration:0.5, });
