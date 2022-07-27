@@ -986,6 +986,7 @@ aside{
 
     .hero {
         padding: 0 24px;
+        height: 100vh;
     }
 
     .mainTitleCover h3 {
@@ -1010,7 +1011,7 @@ aside{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
+        height: 100%;
         padding-bottom:32px;
 
     }
@@ -1210,7 +1211,6 @@ margin-top: 42px;
     margin:0 24px 32px 24px;
     display: flex;
     flex-direction: column-reverse;
-
     align-items: center;
 }
 .goToTopContainer{
@@ -1287,6 +1287,8 @@ iframe{
 
     .hero {
         padding: 0 24px;
+        height: 100vh;
+    
     }
 
     .mainTitleCover h3 {
@@ -1311,7 +1313,7 @@ iframe{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
+        min-height: 100%;
         padding-bottom:48px;
     }
 
