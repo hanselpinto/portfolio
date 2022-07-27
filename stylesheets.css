@@ -986,6 +986,7 @@ aside{
 
     .hero {
         padding: 0 24px;
+        height: 100vh;
     }
 
     .mainTitleCover h3 {
@@ -1009,15 +1010,14 @@ aside{
     .navFlex {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
+        justify-content: flex-start;
+        /* height: 100%; */
         padding-bottom:32px;
 
     }
     
     .mainNavSection {
-    margin-top: 48px;
-
+    margin-top: 96px;
     }
 
     .mainNavSection li{
@@ -1210,7 +1210,6 @@ margin-top: 42px;
     margin:0 24px 32px 24px;
     display: flex;
     flex-direction: column-reverse;
-
     align-items: center;
 }
 .goToTopContainer{
@@ -1287,6 +1286,8 @@ iframe{
 
     .hero {
         padding: 0 24px;
+        /* height: 100vh; */
+    
     }
 
     .mainTitleCover h3 {
@@ -1310,9 +1311,12 @@ iframe{
     .navFlex {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
+        justify-content: flex-start;
+        /* min-height: 100%; */
         padding-bottom:48px;
+    }
+    .mainNavSection{
+        padding-top:96px;
     }
 
     .mainNavSection li{
