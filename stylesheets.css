@@ -565,7 +565,9 @@ main{
     max-height: 250px !important;
     object-fit: cover;
 }
-   
+.workTiles{
+    margin-top:8px;
+}
 
 .workTiles a {
     text-decoration: none;
@@ -775,6 +777,7 @@ margin: 48px 48px 0 48px;
 .jobTitle {
     font-family: 'lora';
     font-weight: 300;
+    line-height: 150%;
 }
 
 
@@ -1012,11 +1015,11 @@ aside{
         justify-content: flex-start;
         padding-bottom:32px;
 
+
     }
     
     .mainNavSection {
     margin-top: 96px;
-
     }
 
     .mainNavSection li{
@@ -1167,9 +1170,16 @@ margin-top: 42px;
 .jobTitle{
     font-size:24px;
 }
+.companyDates{
+    padding-top:8px;
+}
+
 .companyAndDates, .companyName{
     font-size:16px;
+    flex-direction: column;
+
 }
+
 .experienceMainContainer h6{
     font-size: 16px;
 }
@@ -1287,6 +1297,7 @@ iframe{
         padding: 0 24px;
     }
 
+    
     .mainTitleCover h3 {
         font-family: 'Lora';
         font-style: normal;
@@ -1310,6 +1321,7 @@ iframe{
         flex-direction: column;
         justify-content: flex-start;
         padding-bottom:48px;
+
     }
     .mainNavSection{
         margin-top: 96px;
@@ -1323,7 +1335,7 @@ iframe{
     }
 
     .sectionTitle{
-        margin: 96p 32px 0 32px;
+        margin: 96px 32px 0 32px;
     }
 
 .sectionTitle h5{
@@ -1343,7 +1355,8 @@ iframe{
 }
   
 .coneSvg{
-    grid-column: 3/span 2;
+    grid-column: 3/span 2; 
+    
 }
 
 #workSection {
