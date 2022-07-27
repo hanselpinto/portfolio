@@ -185,4 +185,4 @@ tlSkillAnim.fromTo(".coneSkillAnimation",{y:100,ease: "sine.out", rotate:30},{y:
     }
   });
   getInTAnim.from(".contactPlus",{y:200, opacity:0, duration:0.5, });
-  getInTAnim.to(".contactPlus",{y:-100, duration:0.5, });
+  getInTAnim.to(".contactPlus",{y:-100, duration:0.5});
