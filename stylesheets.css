@@ -996,8 +996,8 @@ aside{
     }
 
     .subTitleCover {
-        font-size: 18px;
-        max-width: 90%;
+        font-size: 16px;
+        /* max-width: 90%; */
         padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -1018,7 +1018,7 @@ aside{
         text-align: left;
     }
     .mainNavSection li a{
-        font-size: 32px; 
+        font-size: 24px; 
     }
 
     .contactCover {
@@ -1059,6 +1059,7 @@ aside{
 
 #workSection {
     margin:120px 24px 0 24px;
+    overflow: hidden;
 }
 .workGrid{
     display:flex;
@@ -1112,8 +1113,7 @@ aside{
 }
 
 .rotateSvg{
-    position: absolute;
-    right:-150px;
+    position:absolute;
     z-index: 100;
     width: 50%;
 }
@@ -1245,6 +1245,15 @@ margin-top: 42px;
 .articleContain p {
     font-size: 16px;
 }
+aside{
+    font-size: 16px;
+    padding:16px;
+}
+.articleContain li{
+    margin-left:24px;
+    font-size: 16px;
+}
+
 }
 
 
@@ -1322,6 +1331,7 @@ margin-top: 42px;
 
 #workSection {
     margin:120px 24px 0 24px;
+    overflow: hidden;
 }
 .workGrid{
     display:flex;
@@ -1347,12 +1357,15 @@ margin-top: 42px;
 .tags{
     flex-direction: row;
 }
+
 .workTilesFlexInfo{
-    position: relative;
-    width: 100vh;
-    /* width:fit-content; */
-    margin:16px 16px 16px 16px; 
+    margin:16px 16px 16px 16px;
+    width: auto;
 }
+.dividerWork{
+    width: 100%;
+}
+
 .workTilesTopWrapper{
 
     display:flex;
