@@ -99,7 +99,7 @@ logo a {
 
 logo a h3{
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing:0.2rem;
 }
 .stickyNavBar .hamburgerIcon {
@@ -368,14 +368,18 @@ logo a h3{
 }
 
 .subTitleCover {
-    font-size: 18px;
-    padding-top: 24px;
-    max-width: 85%;
+
+    padding-top: 32px;
+    max-width: 95%; 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 175%;
+}
+.emphasis{
+    font-style: italic;
+    font-weight: 400;
 }
 
 #missionSection {
@@ -440,16 +444,17 @@ logo a h3{
     flex-direction: column;
     margin:242px 48px 0 48px;
     background-color: var(--primary);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 main{
     background-color: var(--primary);
 }
 
-.divider{
+.divider, .dividerWork{
     width: 100%;
     border-bottom: 1px solid var(--border);
 }
+
 .workGrid{
     display: grid;
     position: relative;
@@ -473,14 +478,14 @@ main{
 }
 .rotateSvg{
     grid-row: 3/ auto ; 
-    z-index: -1;
+    z-index: 100;
+    margin-left: 48px;
     width: 250px;
-
 }
 
 .workSectionTitleSticky{
-    position:sticky;
-    top:64px;
+    position: sticky;
+    top:48px;
     padding-bottom:32px;
     text-align: left;
     background-color: #1d1d1d;
@@ -497,6 +502,10 @@ main{
 
 .workSectionTitle h1 {
     text-align: left;
+    line-height: 120%;
+}
+.workTitle{
+    line-height: 150%;
 }
  
 .workTiles {
@@ -506,32 +515,36 @@ main{
 }
 
 .frame{
-    width: 40%;
-    min-height: 450px;
+    width: 50%;
+    min-height: 500px;
     overflow: hidden;
 }
+
 .frame .workTitleImage{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 4px 0 0 4px;
     transition: 0.5s ease-in-out all;
+    
 }
 
 .workTiles:hover {
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--secondary3);
     border-style:groove;
+    overflow: hidden;
 }
 .workTitleImage:hover{
     transform: scale(1.08);
     transition: 0.5s ease-in-out all;
+    overflow: hidden;
 }
 
 .workTileflex{
     display: flex;
     flex-direction: row;
-
 }
+
 .workTilesFlexInfo{
    margin:32px 24px 24px 24px; 
    display: flex;
@@ -545,6 +558,12 @@ main{
     flex-direction: column;
     align-items: flex-start;
    }
+
+.coverImageArticle{
+    width: 100%;
+    max-height: 250px !important;
+    object-fit: cover;
+}
    
 
 .workTiles a {
@@ -563,7 +582,7 @@ main{
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 175%;
 }
 
 
@@ -850,18 +869,20 @@ margin: 48px 48px 0 48px;
 .MainContainer {
     display: block;
     position: relative;
-    margin: 96px auto;
+    margin: 96px auto 48px auto;
     max-width: 1200px;
 }
 
 .MainContainer img {
     width: 100%;
     height: auto;
-    max-height: 900px;
+    max-height: 600px;
+    object-fit: cover;
 }
 
 .navButton:hover {
     background-color: var(--buttonOverlay);
+    border-radius: 4px;
 }
 
 .articleContain {
@@ -871,18 +892,62 @@ margin: 48px 48px 0 48px;
     justify-content: space-between;
     max-width: 800px;
 }
+.imageInArticleUi{
+    max-width: 1000px;
+    display: block;
+    align-content: center;
+}
 
-.articleContain p {
+.articleContain p,
+.articleContain  ol li{
     font-family: 'inter';
     font-weight: 300px;
     line-height: 200%;
     font-size: 18px;
 }
 
+.articleContain ul li{
+    font-family: 'inter';
+    font-weight: 300px;
+    line-height: 200%;
+    font-size: 18px;
+}
+
+.readingTime{
+    font-size: 14px;
+    color:#585858;
+   
+}
+aside{
+    background-color: var(--buttonOverlay);
+    padding: 24px;
+    margin-top:32px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: Inter;
+    font-style: italic;
+    line-height: 175%;
+    font-weight: 300;
+}
+.articleContain li ul{
+    list-style:circle;
+    margin-left: 16px;
+}
+
+.articleContain li {
+    margin-left: 64px;
+    padding-left: 16px;
+}
+
 .articleContain p,
 .articleContain h4,
-.articleContain img {
-    padding-top: 48px;
+.articleContain img,
+.articleContain li {
+    padding-top: 32px;
+    line-height: 175%;
+}
+.spacer{
+    height: 64px;
 }
 
 .doubleColumn {
@@ -1048,7 +1113,6 @@ margin: 48px 48px 0 48px;
 
 .rotateSvg{
     position: absolute;
-   
     right:-150px;
     z-index: 100;
     width: 50%;
@@ -1090,7 +1154,7 @@ margin-top: 42px;
 .experienceMainContainer{
   display: flex;
   margin: 42px 24px 0 24px;
-  flex-direction: column
+  flex-direction: column;
 }
 .jobTitle{
     font-size:24px;
