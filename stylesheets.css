@@ -315,10 +315,11 @@ logo a h3{
 
 .navFlex {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    /* width: 100%; */
     justify-content: space-between;
+   
 }
 .contactCover {
     display: flex;
@@ -980,7 +981,7 @@ aside{
 @media screen and (max-width:451px) {
     .titleContainer {
         max-width: 100%;
-        margin-top: 48px;
+        margin-top: 32px;
      }
 
     .hero {
@@ -991,13 +992,13 @@ aside{
         font-family: 'Lora';
         font-style: normal;
         font-weight: 500;
-        font-size: 48px;
+        font-size: 40px;
         line-height: 127%;
     }
 
     .subTitleCover {
         font-size: 16px;
-        /* max-width: 90%; */
+        max-width: 95%; 
         padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -1009,10 +1010,11 @@ aside{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* height: 100vh; */
+        height: 100vh;
         padding-bottom:32px;
 
     }
+    
     .mainNavSection {
     margin-top: 48px;
 
@@ -1262,7 +1264,7 @@ aside{
     font-size: 16px;
     padding:16px;
 }
-.articleContain li{
+.articleContain ol li,.articleContain ul li{
     margin-left:24px;
     font-size: 16px;
 }
@@ -1291,13 +1293,13 @@ iframe{
         font-family: 'Lora';
         font-style: normal;
         font-weight: 500;
-        font-size: 64px;
+        font-size: 48px;
         line-height: 127%;
     }
 
     .subTitleCover {
         font-size: 18px;
-        max-width: 60%;
+        max-width: 80%;
         padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -1310,7 +1312,7 @@ iframe{
         flex-direction: column;
         justify-content: space-between;
         height: 100vh;
-        padding-bottom:64px;
+        padding-bottom:48px;
     }
 
     .mainNavSection li{
@@ -1541,6 +1543,11 @@ margin-top: 42px;
     width: 100%;
     object-fit: fill;
 }
+.articleContain ol li,.articleContain ul li{
+    margin-left:24px;
+    font-size: 16px;
+}
+
 iframe{
     max-height: 400px;
 }
