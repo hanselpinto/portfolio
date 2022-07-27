@@ -1106,6 +1106,7 @@ aside{
     padding-top:16px;
     font-size: 16px;
 }
+.workTiles > * + * { margin-top: 8px;}
  
 .workTiles h4{
     font-size: 24px;
@@ -1265,6 +1266,9 @@ aside{
     margin-left:24px;
     font-size: 16px;
 }
+iframe{
+   height: 400px;
+}
 
 }
 
@@ -1306,8 +1310,7 @@ aside{
         flex-direction: column;
         justify-content: space-between;
         height: 100vh;
-        padding-bottom:32px;
-
+        padding-bottom:64px;
     }
 
     .mainNavSection li{
@@ -1537,6 +1540,9 @@ margin-top: 42px;
     max-height: 600px;
     width: 100%;
     object-fit: fill;
+}
+iframe{
+    max-height: 400px;
 }
 
 }
