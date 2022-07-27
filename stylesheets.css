@@ -1251,6 +1251,12 @@ margin-top: 42px;
 .articleContain p {
     font-size: 16px;
 }
+.articleContain img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: fill;
+}
+
 aside{
     font-size: 16px;
     padding:16px;
@@ -1526,6 +1532,11 @@ margin-top: 42px;
 }
 .articleContain p {
     font-size: 16px;
+}
+.articleContain img {
+    max-height: 600px;
+    width: 100%;
+    object-fit: fill;
 }
 
 }
