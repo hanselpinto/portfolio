@@ -699,8 +699,8 @@ main{
 .skillsSectionTitle {
     font-size: 32px;
     font-family: 'lora';
-
 }
+
 
 
 /* Experience section */
@@ -778,6 +778,9 @@ margin: 48px 48px 0 48px;
     font-family: 'lora';
     font-weight: 300;
     line-height: 150%;
+}
+.companyDates{
+    text-decoration: none;
 }
 
 
@@ -942,6 +945,10 @@ aside{
     margin-left: 64px;
     padding-left: 16px;
 }
+.articleContain img{
+   max-width: 1200px !important;
+   align-self: center;
+}
 
 .articleContain p,
 .articleContain h4,
@@ -1012,14 +1019,14 @@ aside{
     .navFlex {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding-bottom:32px;
-
-
+        justify-content: space-between;
+        height: 100%;
+        /* padding-bottom:32px; */
     }
     
     .mainNavSection {
-    margin-top: 96px;
+    /* margin-top: 48px; */
+    margin-bottom:116px;
     }
 
     .mainNavSection li{
@@ -1028,7 +1035,6 @@ aside{
     }
     .mainNavSection li a{
         font-size: 32px; 
-        
     }
 
     .contactCover {
@@ -1253,6 +1259,7 @@ margin-top: 42px;
 .articleContain {
     padding:0 24px;
 }
+
 .articleContain h2{
     font-size: 32px;
 }
@@ -1295,6 +1302,8 @@ iframe{
 
     .hero {
         padding: 0 24px;
+        align-items: flex-start;
+        height: 60vh; 
     }
 
     
@@ -1308,7 +1317,7 @@ iframe{
 
     .subTitleCover {
         font-size: 18px;
-        max-width: 80%;
+        /* max-width: 60%; */
         padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -1319,13 +1328,13 @@ iframe{
     .navFlex {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding-bottom:48px;
-
+        justify-content: space-between;
+        height: 100%; 
+        max-width: min-content;
     }
-    .mainNavSection{
-        margin-top: 96px;
-    }
+.mainNavSection{
+    margin-bottom:48px;
+}
 
     .mainNavSection li{
         text-align: left;
@@ -1355,8 +1364,7 @@ iframe{
 }
   
 .coneSvg{
-    grid-column: 3/span 2; 
-    
+    grid-column: 3/span 2;
 }
 
 #workSection {
@@ -1538,6 +1546,8 @@ margin-top: 42px;
     padding:0 24px;
   
 }
+
+
 .articleContain {
     padding:0 24px;
     max-width: 600px;
@@ -1553,7 +1563,8 @@ margin-top: 42px;
 }
 .articleContain img {
     max-height: 600px;
-    width: 100%;
+    max-width: 700px !important;
+    align-self: center;
     object-fit: fill;
 }
 .articleContain ol li,.articleContain ul li{
