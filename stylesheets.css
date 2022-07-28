@@ -996,6 +996,8 @@ aside{
 
     .hero {
         padding: 0 24px;
+        align-items: flex-start;
+        height: 60vh; 
     }
 
     .mainTitleCover h3 {
@@ -1008,7 +1010,7 @@ aside{
 
     .subTitleCover {
         font-size: 16px;
-        max-width: 95%; 
+        /* max-width: 95%;  */
         padding-top: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -1021,20 +1023,22 @@ aside{
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        max-width: min-content;
         /* padding-bottom:32px; */
     }
     
     .mainNavSection {
     /* margin-top: 48px; */
-    margin-bottom:116px;
+    margin-bottom:48px;
     }
 
     .mainNavSection li{
         text-align: left;
+        padding-top:8px;
        
     }
     .mainNavSection li a{
-        font-size: 32px; 
+        font-size: 24px; 
     }
 
     .contactCover {
