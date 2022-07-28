@@ -1291,8 +1291,15 @@ aside{
 iframe{
    height: 400px;
 }
-
 }
+
+@media screen and (max-height:800px) and(min-width: 1000px) {
+    .mainTitleCover h3 {
+        font-size:80px;
+    }
+}
+
+
 
 
 @media screen and (min-width:451px) and (max-width:1024px) {
@@ -1338,7 +1345,7 @@ iframe{
         max-width: min-content;
     }
 .mainNavSection{
-    margin-bottom:64px;
+    margin-bottom:48px;
 }
 
     .mainNavSection li{
