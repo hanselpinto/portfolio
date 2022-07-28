@@ -996,7 +996,6 @@ aside{
 
     .hero {
         padding: 0 24px;
-        height: 100vh;
     }
 
     .mainTitleCover h3 {
@@ -1341,7 +1340,7 @@ iframe{
         text-align: left;
     }
     .mainNavSection li a{
-        font-size: 32px; 
+        font-size: 48px; 
     }
 
     .sectionTitle{
