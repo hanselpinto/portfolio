@@ -1293,10 +1293,11 @@ iframe{
 }
 }
 
-@media screen and (max-height:800px) and(min-width: 1000px) {
+@media screen and (max-height:800px) and (min-width:1024px){
     .mainTitleCover h3 {
         font-size:80px;
     }
+   
 }
 
 
